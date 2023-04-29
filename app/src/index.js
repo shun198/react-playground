@@ -1,10 +1,14 @@
+//package.jsonからパッケージをimport
+// コンポーネントという
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// public/index.htmlのdivタグ内のrootを参照
 const root = ReactDOM.createRoot(document.getElementById('root'));
+// src/App.jsからApp()メソッドを参照
 root.render(
   <React.StrictMode>
     <App />
