@@ -36,7 +36,40 @@ ReactDOM.render(<Welcome />, document.getElementById('root'));
 
 ## State
 
-コンポーネントの状態を表現するためのオブジェクトです。ステートを変更することで、コンポーネントの UI が再レンダリングされます。
+コンポーネントの状態を表現するためのオブジェクトです
+ステートを変更することで、コンポーネントの UI が再レンダリングされます
+コンポーネント内に定義します
+
+```javascript
+import React, { useState } from 'react';
+
+import ExpenseDate from './ExpenseDate';
+import Card from '../UI/Card';
+import './ExpenseItem.css';
+
+function ExpenseItem(props) {
+  // React Hookの一つであるuseStateを使用
+  const [title, setTitle] = useState(props.title);
+
+  const clickHandler = () => {
+    setTitle('Updated!');
+    console.log(title);
+  };
+
+  return (
+    <Card className="expense-item">
+      <ExpenseDate date={props.date} />
+      <div className="expense-item__description">
+        <h2>{title}</h2>
+        <div className="expense-item__price">${props.amount}</div>
+      </div>
+      <button onClick={clickHandler}>Change Title</button>
+    </Card>
+  );
+}
+
+export default ExpenseItem;
+```
 
 ## Props
 
