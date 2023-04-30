@@ -213,3 +213,5 @@ function ExpenseItem(props) {
 
 export default ExpenseItem;
 ```
+
+## コンポーネントの分割

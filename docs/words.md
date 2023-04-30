@@ -50,6 +50,8 @@ function Greeting(props) {
 ReactDOM.render(<Greeting name="John" />, document.getElementById('root'));
 ```
 
+## Composition
+
 ## ライフサイクルメソッド
 
 React の Component は、
