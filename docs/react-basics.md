@@ -244,3 +244,18 @@ function ExpenseItem(props) {
 
 export default ExpenseItem;
 ```
+
+## パッケージのインストール
+
+```
+npm install <パッケージ名>
+```
+
+でインストールできます
+
+例
+
+```
+npm install react-hook-form
+npm install next/router
+```
